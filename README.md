@@ -1,2 +1,16 @@
 # CribbingChecker
-It is a system to detect cribbing.
+複数のテストの答案用紙の画像をGoogle Vision APIで解析し、<br>
+解析結果からカンニングをしていないかを判定するアプリです。
+
+## Description
+記述式の答案用紙の記述内容を取得して、記述内容が他の答案と酷似する内容の答案を割り出す。
+
+前提として、<br>
+①答案用紙は画像ファイル(.png)に変換されていること。<br>
+②項目は、学籍番号と問題文と回答。問題文と回答は複数ある。<br>
+③答案のチェック内容は、文言の完全一致、単語レベルでの一致で判定する。<br>
+
+## Requirement
+ - node.js
+ - Google Vision API
+ 

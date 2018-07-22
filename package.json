@@ -1,0 +1,24 @@
+{
+  "name": "cribbing_checker",
+  "version": "1.0.0",
+  "description": "It is a system to detect cribbing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/a-nakamura1015/cribbing_checker.git"
+  },
+  "keywords": [
+    "to",
+    "detect",
+    "cribbing"
+  ],
+  "author": "a-nakamura@esm.co.jp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/a-nakamura1015/cribbing_checker/issues"
+  },
+  "homepage": "https://github.com/a-nakamura1015/cribbing_checker#readme"
+}
