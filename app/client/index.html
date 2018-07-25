@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>CribbingChecker</title>
+</head>
+<body>
+  <header>
+    CribbingChecker
+  </header>
+  <label>
+    <input type="file" id="inputFile" hidden multiple/>
+    <a class="waves-effect waves-light btn">画像取り込み</a>
+  </label>
+  <a class="waves-effect waves-light btn">画像分析開始</a>
+
+  <div class="row">
+      <div class="col s4">
+        <div class="card">
+          <div class="card-image">
+            <img src="http://deliver.commons.nicovideo.jp/thumbnail/nc9494?size=l">
+            <span class="card-title">0000001</span>
+          </div>
+          <div class="card-action">
+            <a class="open" href="#">開く</a>
+            <a class="delete" href="#">削除</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s4">
+        <div class="card">
+          <div class="card-image">
+            <img src="http://deliver.commons.nicovideo.jp/thumbnail/nc9494?size=l">
+            <span class="card-title">0000002</span>
+          </div>
+          <div class="card-action">
+            <a class="open" href="#">開く</a>
+            <a class="delete" href="#">削除</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s4">
+        <div class="card">
+          <div class="card-image">
+            <img src="http://deliver.commons.nicovideo.jp/thumbnail/nc9494?size=l">
+            <span class="card-title">0000003</span>
+          </div>
+          <div class="card-action">
+            <a class="open" href="#">開く</a>
+            <a class="delete" href="#">削除</a>
+          </div>
+        </div>
+      </div>
+      <div id="wrapper" class="col s4">
+      </div>
+      </div>
+    </div>
+
+</body>
+<script langage="javascript" type="text/javascript">
+  var obj = document.getElementById("inputFile");
+  obj.addEventListener('change', function(evt) {
+    var file = evt.target.files;
+    var num = file.length;
+
+    for (var index = 0; index < num; index++) {
+      // alert(file[index].name);
+    }
+    var target = document.getElementById('wrapper')
+    // ボタンが押されたらタグを作って追加
+    var newTag = document.createElement('div');
+    newTag.setAttribute('class', 'card');
+    newTag.setAttribute("id", "card");
+    // 作成したタグの中身を作成
+    // newTag.innerHTML = file[0].name;
+    // 作ったタグを指定した要素の子要素として追加
+    target.appendChild(newTag);
+    target = document.getElementById('card');
+    newTag = document.createElement('div');
+    newTag.setAttribute('class', 'card-image');
+    newTag.setAttribute('id', 'card-image');
+    target.appendChild(newTag);
+    target = document.getElementById('card-image');
+    newTag = document.createElement('img');
+    newTag.setAttribute('src', 'http://deliver.commons.nicovideo.jp/thumbnail/nc9494?size=l');
+    target.appendChild(newTag);
+    target.innerHTML += '<span class="card-title">' + file[0].name + '</span>';
+    target = document.getElementById('card');
+    newTag = document.createElement('div');
+    newTag.setAttribute('class', 'card-action');
+    newTag.setAttribute('id', 'card-action');
+    target.appendChild(newTag);
+    target = document.getElementById('card-action');
+    target.innerHTML += '<a class="open" href="#">開く</a><a class="delete" href="#">削除</a>';
+
+  }, false);
+</script>
+</html>
