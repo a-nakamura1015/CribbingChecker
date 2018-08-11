@@ -1,0 +1,14 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "It is client side to detect cribbing system.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest ."
+  },
+  "author": "a-nakamura@esm.co.jp",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

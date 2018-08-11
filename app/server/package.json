@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "It is server side to detect cribbing system.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest ."
+  },
+  "author": "a-nakamura@esm.co.jp",
+  "license": "MIT",
+  "dependencies": {
+    "bower": "^1.8.4",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.3.0",
+    "eslint-config-google": "^0.9.1"
+  }
+}
